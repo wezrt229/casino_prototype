@@ -36,10 +36,8 @@ def highRisk(stavka, balance):
         balance += stavka * 35
         print(f"Your balance: {balance}!!!!!!!!")
         time.sleep(1)
-        cont = func.Cont()
-        if cont == 1:
-            return highRisk(stavka, balance)
-        elif cont == 2:
+        answer = func.ContorStop()
+        if answer == 'continue':
             return ('continue', balance)
     else:
         return func.lose(stavka, balance)
