@@ -42,7 +42,7 @@ def bet(balance):
         except ValueError:
             print("Wrong answer, try again")
     
-def ContorStop():
+def ContorStop(balance):
     print("Choose answer:")
     print("1. Continue")
     print("2. Stop")
@@ -50,6 +50,7 @@ def ContorStop():
         try:
             answer = int(input("1 or 2: "))
             if answer == 2:
+                    print(f"--Your balance: {balance}")
                     print("---The game ended---")
                     exit()
             elif answer == 1:
@@ -107,26 +108,7 @@ def lose(stavka, balance):
             except ValueError:
                     print("Wrong answer, try again")
     else:
-        return (ContorStop(), balance)
-        
-
-# def Cont():
-#     while True:
-#         try:
-#             print("Do you want to continue?")
-#             time.sleep(1)
-#             print("1. Yes")
-#             print("2. No")
-#             time.sleep(1)
-#             cont = int(input("Choose an answer: "))
-#             if cont == 1:
-#                 return cont
-#             elif cont == 2:
-#                 return cont
-#             else:
-#                 print("Wrong answer, try again")
-#         except ValueError:
-#             print("Wrong answer, try again")
+        return (ContorStop(balance), balance)
 
 def wiN(stavka, balance):
     print("You won!!!")

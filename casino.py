@@ -7,9 +7,9 @@ import high_risk
 print("-------WELCOME TO CASINO-------")
 time.sleep(1)
 print("Here is what you can play:")
-func.main_menu()
 balance = 100000
-ContOrStop = func.ContorStop()
+func.main_menu()
+ContOrStop = func.ContorStop(balance)
 while ContOrStop in ['continue']:
     stavka, balance = func.bet(balance)
     print("Risks:")

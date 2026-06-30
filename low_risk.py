@@ -14,7 +14,7 @@ def red_black(stavka, balance):
                 result = func.rand_choice(["Red", "Black"])
                 if result == "Red":
                     balance = func.wiN(stavka, balance)
-                    answer = func.ContorStop()
+                    answer = func.ContorStop(balance)
                     if answer == 'continue':
                         return ('continue', balance)
                 else:
@@ -23,7 +23,7 @@ def red_black(stavka, balance):
                 result = func.rand_choice(["Red", "Black"])
                 if result == "Black":
                     balance = func.wiN(stavka, balance)
-                    answer = func.ContorStop()
+                    answer = func.ContorStop(balance)
                     if answer == 'continue':
                         return ('continue', balance)
                 else:
@@ -45,7 +45,7 @@ def even_odd(stavka, balance):
                 result = func.rand_choice(["Even", "Odd"])
                 if result == "Even":
                     balance = func.wiN(stavka, balance)
-                    answer = func.ContorStop()
+                    answer = func.ContorStop(balance)
                     if answer == 'continue':
                         return ('continue', balance)
                 else:
@@ -54,7 +54,7 @@ def even_odd(stavka, balance):
                 result = func.rand_choice(["Even", "Odd"])
                 if result == "Odd":
                     balance = func.wiN(stavka, balance)
-                    answer = func.ContorStop()
+                    answer = func.ContorStop(balance)
                     if answer == 'continue':
                         return ('continue', balance)
                 else:

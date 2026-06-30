@@ -2,12 +2,7 @@ import time
 import random
 import func
 
-def highRisk(stavka, balance):
-    print("You can choose a number between 0 and 36")
-    time.sleep(1)
-    print("What'll you choose?")
-    time.sleep(1)
-    def getNumber():
+def getNumber():
         while True:
             try:
                 type2 = int(input("Write a number: "))
@@ -17,6 +12,12 @@ def highRisk(stavka, balance):
                     print("Wrong answer, try again")
             except ValueError:
                 print("Wrong answer, try again")
+                
+def highRisk(stavka, balance):
+    print("You can choose a number between 0 and 36")
+    time.sleep(1)
+    print("What'll you choose?")
+    time.sleep(1)
     type2 = getNumber()
     result = random.randint(0, 36)
     print("Roulette landed on: ", result)
@@ -36,7 +37,7 @@ def highRisk(stavka, balance):
         balance += stavka * 35
         print(f"Your balance: {balance}!!!!!!!!")
         time.sleep(1)
-        answer = func.ContorStop()
+        answer = func.ContorStop(balance)
         if answer == 'continue':
             return ('continue', balance)
     else:
